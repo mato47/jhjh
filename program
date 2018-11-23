@@ -1,0 +1,87 @@
+<html>
+
+<head><title>Javascript - Övningar</title><meta charset="utf-8"></head>
+
+<body>
+
+<pre><code><script>
+
+var antalPlatser = prompt("Antal platser i klassrummet");
+
+var antalElever = prompt("Antal elver");
+
+var difference = (antalPlatser - antalElever)/ -1;
+
+
+
+console.log(difference);
+
+
+
+//sätter in värde på plats
+
+var platsArray = [];
+
+for(var i = 0; i <  antalPlatser; i++){
+
+  platsArray[i]; }
+
+
+
+//sätter in värde på elev
+
+var elevArray = []; 
+
+  for(var i = 0; i < antalElever; i++){
+
+    elevArray[i] = i+1;
+
+  }
+
+
+
+var plats = 0
+
+console.log(elevArray, platsArray);
+
+if (antalPlatser < antalElever) {
+
+      document.writeln("Det saknas :" + difference + " platser. Försök igen genom att ladda om sidan. ")
+
+    }
+
+ else {
+
+     for(var i = 0; i < antalElever; i++){  // den ska ta random elev och sätta på plats 1- antalPlatser
+
+              elevArray[i] = Math.round(Math.random() * antalPlatser);
+
+              var elev = elevArray[i];
+
+              var plats = plats+1
+
+              document.writeln( plats + " - " + elev );
+
+              var removed = elevArray.splice(i, 1)// tar bort den elev som valts så den inte kommer igen
+
+              console.log("bort tagen: " + removed);
+
+
+
+      }
+
+
+
+    }
+
+
+
+document.writeln("Tack för att du använt vårat program! Felanmäl gärna till kazper.ovelius@gmail.com");
+
+
+
+</script></code></pre>
+
+</body>
+
+</html>
